@@ -1,0 +1,34 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "bundle/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "background/img/black.png",
+      "default_popup": "popup/popup.html",
+      "default_title": "Yandex Music Fisher"
+   },
+   "content_scripts": [ {
+      "js": [ "bundle/content.js" ],
+      "matches": [ "https://music.yandex.ru/*", "https://music.yandex.ua/*", "https://music.yandex.kz/*", "https://music.yandex.by/*", "https://radio.yandex.ru/*", "https://radio.yandex.ua/*", "https://radio.yandex.kz/*", "https://radio.yandex.by/*" ]
+   } ],
+   "description": "Скачивание музыки с сервисов Яндекс.Музыка и Яндекс.Радио",
+   "icons": {
+      "128": "background/img/icon.png",
+      "16": "background/img/icon-16x16.png",
+      "48": "background/img/icon-32x32.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqyOADFrnuAkuO+dauFiMkqqOCZKPEKWrEbU3hrE9mN5YPoaSlG9PpEtR/MISoMZ7NVH8QlJCgTxirTUOxVj/a8bIKxWcjRFFQSbX6/+r7EUPBkfPLuHFKYOS1QJTyj+eR4RZkRfgNC+Gx12OjjqohPYBTyIFjXRP+Q3mAZiRnrqWGDx4mX9mcOvv/9YR3w+4Yuio3Cu/Iq7GMOhjSpJx7kn1m8aIJUPYKrU+v6Hg/8MtU7EHtsNZ4k/xlG/hrghISrrAw02VgB3513Nygtn+tuYWZaaiVjrSbSXFzZkCrNLerSjFkEPN9GkTfR9BNOo02sKdBVk9hDqpN++unFv6vQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "55.0",
+   "name": "Yandex Music Fisher",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "tabs", "downloads", "*://*/*", "downloads.shelf" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.9.5"
+}
